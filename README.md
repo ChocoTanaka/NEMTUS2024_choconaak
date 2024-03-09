@@ -1,1 +1,3 @@
 # NEMTUS2024_choconaak
+
+提出物のAppはAndroidに、コードはCodeのフォルダにあるよ
