@@ -1,9 +1,12 @@
+import 'dart:convert';
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'Firebase_command.dart';
 import 'Page1.dart';
 import 'Page2-2.dart';
 import 'Page3.dart';
+import 'SetConst.dart';
 import'Symbol_class.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -117,6 +120,18 @@ class Untzi_Rayout extends State<Untzi>{
       _showDialogAfterDelay();
     }
     Auth_signin();
+    _ReadCSV();
+  }
+
+  Future _ReadCSV() async {
+    final String data = await rootBundle.loadString('assets/Data/data.csv');
+    final lines = LineSplitter.split(data);
+    for (String line in lines) {
+      print(line);
+      List rows = line.split(',');
+      Untzi_Data UD = Untzi_Data(rows[0], rows[1], rows[2], int.parse(rows[3]), rows[4]);
+      Menu[UD] = 0;
+    }
   }
 
   Future<void> _showDialogAfterDelay() async {

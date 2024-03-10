@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:untzi_box/Symbol_class.dart';
 import 'SetConst.dart';

@@ -51,12 +51,7 @@ class Untzi_Data{
   }
 }
 
-Map<Untzi_Data,int> Menu = {
-Untzi_Data('ビチ', 'slimy','73330059890B0D9F', 100, 'NFT_UNKO1-6'):0,
-Untzi_Data('ブリ', 'gel-like','2036C616A75FADF8', 400, 'NFT_UNKO1-3'):0,
-Untzi_Data('モリ', 'mountain','113D023D6B972AD8', 800, 'NFT_UNKO1-4'):0,
-Untzi_Data('カチ', 'block','5378C83568423213', 250, 'NFT_UNKO1-5'):0,
-};
+Map<Untzi_Data,int> Menu = {};
 
 int getMenuAmount(String name){
   int val = 0;
